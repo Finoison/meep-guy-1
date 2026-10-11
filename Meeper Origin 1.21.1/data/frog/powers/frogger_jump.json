@@ -1,0 +1,25 @@
+{
+    "name": "Titan Leap",
+    "description": "You can jump absurdly high (toggle with primary). It is the strength of three frogs in one body. You also take no fall damage.",
+    "type": "origins:multiple",
+    "jump": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "frog:frogger_jump_toggle"
+        },
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 3.6,
+            "name": "Titan Leap"
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "primary"
+        },
+        "retain_state": true
+    }
+}

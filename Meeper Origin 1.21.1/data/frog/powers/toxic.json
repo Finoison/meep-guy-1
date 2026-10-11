@@ -1,0 +1,32 @@
+{
+    "name": "Toxic Skin",
+    "description": "Those who strike you in melee taste the swamp's venom and become poisoned.",
+    "type": "origins:attacker_action_when_hit",
+    "damage_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:name",
+                "name": "mob"
+            },
+            {
+                "type": "origins:name",
+                "name": "player"
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:poison",
+            "duration": 100,
+            "amplifier": 0,
+            "show_particles": true,
+            "show_icon": true
+        }
+    },
+    "cooldown": 100,
+    "hud_render": {
+        "should_render": false
+    }
+}

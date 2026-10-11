@@ -1,0 +1,31 @@
+{
+    "name": "Dart for a reason.",
+    "description": "Anything that strikes you, and anything you strike, tastes poison.",
+    "type": "origins:multiple",
+    "when_hit": {
+        "type": "origins:attacker_action_when_hit",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:poison",
+                "duration": 40,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    },
+    "on_hit": {
+        "type": "origins:target_action_on_hit",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:poison",
+                "duration": 40,
+                "amplifier": 0,
+                "show_particles": true,
+                "show_icon": true
+            }
+        }
+    }
+}

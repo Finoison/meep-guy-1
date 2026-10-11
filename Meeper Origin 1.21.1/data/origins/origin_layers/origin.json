@@ -1,0 +1,10 @@
+{
+    "origins": [
+        "frog:tadpole",
+        "frog:frog",
+        "frog:amphibian",
+        "frog:wart_toad",
+        "frog:frogger"
+    ],
+    "enabled": true
+}

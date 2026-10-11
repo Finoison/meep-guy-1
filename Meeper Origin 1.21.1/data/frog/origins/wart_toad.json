@@ -1,0 +1,28 @@
+{
+    "name": "The Wart Toad",
+    "description": "Something crawled out of the Nether's brimstone and kept its warts. Curses slide from its hide like shed skin and flame is its only embrace, water sickens it, and the Frog gods are watching all the same, maybe even closer.",
+    "unchoosable": true,
+    "powers": [
+        "frog:toad_jump",
+        "frog:toad_size",
+        "frog:toad_color",
+        "frog:vision",
+        "frog:slime",
+        "frog:fall",
+        "frog:feet",
+        "frog:toad_health",
+        "frog:warty_hide",
+        "frog:shed",
+        "frog:magma",
+        "frog:parched",
+        "frog:out_of_place",
+        "frog:wet_death",
+        "frog:gods",
+        "frog:fusion",
+        "frog:form_timer"
+    ],
+    "icon": {
+        "item": "minecraft:pearlescent_froglight"
+    },
+    "impact": 3
+}

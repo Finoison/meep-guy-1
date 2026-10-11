@@ -1,0 +1,10 @@
+{
+    "name": "Small Stomach",
+    "description": "You only get hungry half as fast.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -0.5,
+        "name": "Reduced exhaustion from small appetite"
+    }
+}

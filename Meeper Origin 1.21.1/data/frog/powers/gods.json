@@ -1,0 +1,13 @@
+{
+    "name": "The Frog Gods Are Watching",
+    "description": "They watch from every lily pad, every ripple, every shadow beneath the water. Take the life of one of their children and they will take yours. There is no bargaining, and no savior for you.",
+    "type": "origins:self_action_on_kill",
+    "target_condition": {
+        "type": "origins:entity_type",
+        "entity_type": "minecraft:frog"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "function frog:judge"
+    }
+}

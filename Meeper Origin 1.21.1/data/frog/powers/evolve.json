@@ -1,0 +1,140 @@
+{
+    "name": "Metamorphosis",
+    "description": "Hold a froglight, crouch, and use your primary ability to devour it and be remade, becoming a new being. If you obtain all of the froglights, you become something...insane. However you only get it once.",
+    "type": "origins:multiple",
+    "meeper": {
+        "type": "origins:active_self",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:verdant_froglight"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s minecraft:verdant_froglight 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"Venom wakes beneath your skin...\",\"color\":\"green\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin frog:frog"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "amphibian": {
+        "type": "origins:active_self",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:ochre_froglight"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s minecraft:ochre_froglight 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"The pond opens its arms to you...\",\"color\":\"gold\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin frog:amphibian"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary"
+        }
+    },
+    "toad": {
+        "type": "origins:active_self",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:equipped_item",
+                    "equipment_slot": "mainhand",
+                    "item_condition": {
+                        "type": "origins:ingredient",
+                        "ingredient": {
+                            "item": "minecraft:pearlescent_froglight"
+                        }
+                    }
+                },
+                {
+                    "type": "origins:sneaking"
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "clear @s minecraft:pearlescent_froglight 1"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "title @s actionbar {\"text\":\"The brimstone remembers you...\",\"color\":\"dark_purple\"}"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "origin set @s origins:origin frog:wart_toad"
+                }
+            ]
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key": {
+            "key": "primary"
+        }
+    }
+}

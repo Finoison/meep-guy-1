@@ -1,0 +1,16 @@
+{
+    "name": "Water = Pain",
+    "description": "Water poisons your warty hide. Stand in it and you will drown within seconds.",
+    "type": "origins:action_over_time",
+    "interval": 10,
+    "condition": {
+        "type": "origins:fluid_height",
+        "fluid": "minecraft:water",
+        "comparison": ">",
+        "compare_to": 0.0
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "damage @s 2 minecraft:drown"
+    }
+}

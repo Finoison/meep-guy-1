@@ -1,0 +1,19 @@
+{
+    "name": "Warty Hide",
+    "description": "Your thick, knobbed skin gives you 4 armor and strong resistance to knockback.",
+    "type": "origins:attribute",
+    "modifiers": [
+        {
+            "attribute": "minecraft:generic.armor",
+            "operation": "addition",
+            "value": 4,
+            "name": "Warty hide armor"
+        },
+        {
+            "attribute": "minecraft:generic.knockback_resistance",
+            "operation": "addition",
+            "value": 0.4,
+            "name": "Warty hide knockback resistance"
+        }
+    ]
+}

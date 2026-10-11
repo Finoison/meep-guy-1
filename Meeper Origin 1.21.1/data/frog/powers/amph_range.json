@@ -1,0 +1,72 @@
+{
+    "name": "Long Tongue",
+    "description": "Your attack range and block reach are both doubled. Outside the Nether you gain a further +1 block for both.",
+    "type": "origins:multiple",
+    "apply": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "entity_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:dimension",
+                "dimension": "minecraft:the_nether"
+            },
+            "if_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:block_reach 2 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:entity_reach 2 @s"
+                    }
+                ]
+            },
+            "else_action": {
+                "type": "origins:and",
+                "actions": [
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:block_reach 2.4444 @s"
+                    },
+                    {
+                        "type": "origins:execute_command",
+                        "command": "scale set pehkui:entity_reach 2.6667 @s"
+                    }
+                ]
+            }
+        }
+    },
+    "setup": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:block_reach 2.4444 @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale set pehkui:entity_reach 2.6667 @s"
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:block_reach @s"
+                },
+                {
+                    "type": "origins:execute_command",
+                    "command": "scale reset pehkui:entity_reach @s"
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+    "hidden": true,
+    "type": "origins:action_over_time",
+    "interval": 10,
+    "condition": {
+        "type": "origins:advancement",
+        "advancement": "minecraft:husbandry/froglights"
+    },
+    "entity_action": {
+        "type": "origins:execute_command",
+        "command": "execute if entity @s[tag=!frog_fused] run function frog:fuse"
+    }
+}

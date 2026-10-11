@@ -1,0 +1,193 @@
+{
+    "name": "Two Worlds",
+    "description": "Neither world will hold you forever. You get ten minutes in whichever one you stand in. A single bar shows your time left, blue waves in the water and green grass on land, and the other world's time refills twenty times faster while you are away. When the bar empties, that world starts wearing you down, slowly but steadily, until you see the light.",
+    "type": "origins:multiple",
+    "water_meter": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 16,
+            "icon_index": 0,
+            "condition": {
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0.0
+            }
+        }
+    },
+    "land_meter": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 600,
+        "start_value": 600,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 8,
+            "icon_index": 0,
+            "condition": {
+                "inverted": true,
+                "type": "origins:fluid_height",
+                "fluid": "minecraft:water",
+                "comparison": ">",
+                "compare_to": 0.0
+            }
+        }
+    },
+    "water_down": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "frog:waterlog_water_meter",
+            "change": -1
+        }
+    },
+    "water_up": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "inverted": true,
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "frog:waterlog_water_meter",
+            "change": 20
+        }
+    },
+    "land_down": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "inverted": true,
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "frog:waterlog_land_meter",
+            "change": -1
+        }
+    },
+    "land_up": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:water",
+            "comparison": ">",
+            "compare_to": 0.0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "frog:waterlog_land_meter",
+            "change": 20
+        }
+    },
+    "drown": {
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0.0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "frog:waterlog_water_meter",
+                    "comparison": "<=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "damage @s 1 minecraft:drown"
+        }
+    },
+    "dry_out": {
+        "type": "origins:action_over_time",
+        "interval": 60,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "inverted": true,
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0.0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "frog:waterlog_land_meter",
+                    "comparison": "<=",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "entity_action": {
+            "type": "origins:execute_command",
+            "command": "damage @s 1 minecraft:dry_out"
+        }
+    },
+    "reset": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "frog:waterlog_water_meter",
+                    "change": 600,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "frog:waterlog_land_meter",
+                    "change": 600,
+                    "operation": "set"
+                }
+            ]
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:and",
+            "actions": [
+                {
+                    "type": "origins:change_resource",
+                    "resource": "frog:waterlog_water_meter",
+                    "change": 600,
+                    "operation": "set"
+                },
+                {
+                    "type": "origins:change_resource",
+                    "resource": "frog:waterlog_land_meter",
+                    "change": 600,
+                    "operation": "set"
+                }
+            ]
+        }
+    }
+}

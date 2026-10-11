@@ -1,0 +1,10 @@
+{
+    "name": "Amphibian",
+    "description": "You can breathe under water, swim faster, and deal 33% more damage when submerged in water.",
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 20
+    }
+}

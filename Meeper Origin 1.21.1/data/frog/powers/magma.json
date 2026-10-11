@@ -1,0 +1,8 @@
+{
+    "name": "Forged in Magma",
+    "description": "Fire and lava cannot hurt you. The Nether becomes your true home.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+        "type": "origins:fire"
+    }
+}

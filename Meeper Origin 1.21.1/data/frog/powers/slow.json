@@ -1,0 +1,16 @@
+{
+    "name": "Slow",
+    "description": "You walk incredibly slow.",
+    "type": "origins:action_over_time",
+    "interval": 35,
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 40,
+            "amplifier": 2,
+            "show_particles": true,
+            "show_icon": true
+        }
+    }
+}

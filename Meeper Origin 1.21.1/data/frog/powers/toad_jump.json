@@ -1,0 +1,29 @@
+{
+    "name": "Heavy Hop",
+    "description": "You can jump very high (toggle with primary), but hauling that bulk skyward is ravenous work. Every high jump drains your hunger incredibly quickly.",
+    "type": "origins:multiple",
+    "jump": {
+        "condition": {
+            "type": "origins:power_active",
+            "power": "frog:toad_jump_toggle"
+        },
+        "type": "origins:modify_jump",
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 1.2,
+            "name": "Heavy Hop"
+        },
+        "entity_action": {
+            "type": "origins:exhaust",
+            "amount": 3.0
+        }
+    },
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "primary"
+        },
+        "retain_state": true
+    }
+}

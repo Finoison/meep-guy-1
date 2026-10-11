@@ -1,0 +1,11 @@
+{
+    "name": "Quick",
+    "description": "Poison dart frogs live fast. You move 25% faster on foot.",
+    "type": "origins:attribute",
+    "modifier": {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "multiply_base",
+        "value": 0.25,
+        "name": "Meeper quickness"
+    }
+}

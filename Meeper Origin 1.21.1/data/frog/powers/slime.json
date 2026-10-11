@@ -1,0 +1,73 @@
+{
+    "name": "Mmmm...",
+    "description": "When killing slimes or magma cubes a froglight drops on the ground, matching the climate you are standing in: green in cold biomes and the End, purple in hot biomes like deserts and the Nether, and yellow everywhere in between",
+    "type": "origins:self_action_on_kill",
+    "target_condition": {
+        "type": "origins:or",
+        "conditions": [
+            {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:slime"
+            },
+            {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:magma_cube"
+            }
+        ]
+    },
+    "entity_action": {
+        "type": "origins:if_else",
+        "condition": {
+            "type": "origins:or",
+            "conditions": [
+                {
+                    "type": "origins:dimension",
+                    "dimension": "minecraft:the_end"
+                },
+                {
+                    "type": "origins:biome",
+                    "condition": {
+                        "type": "origins:temperature",
+                        "comparison": "<",
+                        "compare_to": 0.15
+                    }
+                },
+                {
+                    "type": "origins:biome",
+                    "biomes": [
+                        "minecraft:deep_frozen_ocean"
+                    ]
+                }
+            ]
+        },
+        "if_action": {
+            "type": "origins:execute_command",
+            "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:verdant_froglight\",Count:1b},PickupDelay:10}"
+        },
+        "else_action": {
+            "type": "origins:if_else",
+            "condition": {
+                "type": "origins:biome",
+                "condition": {
+                    "type": "origins:temperature",
+                    "comparison": ">",
+                    "compare_to": 1.5
+                }
+            },
+            "if_action": {
+                "type": "origins:execute_command",
+                "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:pearlescent_froglight\",Count:1b},PickupDelay:10}"
+            },
+            "else_action": {
+                "type": "origins:execute_command",
+                "command": "summon item ~ ~ ~ {Item:{id:\"minecraft:ochre_froglight\",Count:1b},PickupDelay:10}"
+            }
+        }
+    },
+    "cooldown": 20,
+    "hud_render": {
+        "should_render": true,
+        "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+        "bar_index": 22
+    }
+}

@@ -1,0 +1,36 @@
+{
+    "name": "Amphibian Hands",
+    "description": "You mine underwater as fast as you do on land, whether you are standing on the bottom or swimming.",
+    "type": "origins:multiple",
+    "wet": {
+        "type": "origins:modify_break_speed",
+        "condition": {
+            "type": "origins:submerged_in",
+            "fluid": "water"
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 4
+        }
+    },
+    "float": {
+        "type": "origins:modify_break_speed",
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:submerged_in",
+                    "fluid": "water"
+                },
+                {
+                    "inverted": true,
+                    "type": "origins:on_block"
+                }
+            ]
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 4
+        }
+    }
+}

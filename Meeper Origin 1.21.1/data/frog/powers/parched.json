@@ -1,0 +1,107 @@
+{
+    "name": "Parched",
+    "description": "Your hide needs the embrace of lava every five minutes. The lava bar drains while you stay dry. When it empties you grow slow, feeble and brittle until you bathe in lava again. It will not kill you, but you will wish it did.",
+    "type": "origins:multiple",
+    "meter": {
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/huang/resource_bar_02.png",
+            "bar_index": 15,
+            "icon_index": 0,
+            "inverted": true
+        }
+    },
+    "dry": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "inverted": true,
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:lava",
+            "comparison": ">",
+            "compare_to": 0.0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "frog:parched_meter",
+            "change": 1
+        }
+    },
+    "soak": {
+        "type": "origins:action_over_time",
+        "interval": 20,
+        "condition": {
+            "type": "origins:fluid_height",
+            "fluid": "minecraft:lava",
+            "comparison": ">",
+            "compare_to": 0.0
+        },
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "frog:parched_meter",
+            "change": -10
+        }
+    },
+    "slowed": {
+        "type": "origins:conditioned_attribute",
+        "tick_rate": 20,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "frog:parched_meter",
+            "comparison": ">=",
+            "compare_to": 300
+        },
+        "modifier": {
+            "attribute": "minecraft:generic.movement_speed",
+            "operation": "multiply_total",
+            "value": -0.35,
+            "name": "Parched slowdown"
+        }
+    },
+    "feeble": {
+        "type": "origins:modify_damage_dealt",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "frog:parched_meter",
+            "comparison": ">=",
+            "compare_to": 300
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": -0.5
+        }
+    },
+    "brittle": {
+        "type": "origins:modify_damage_taken",
+        "condition": {
+            "type": "origins:resource",
+            "resource": "frog:parched_meter",
+            "comparison": ">=",
+            "compare_to": 300
+        },
+        "modifier": {
+            "operation": "multiply_total",
+            "value": 0.3
+        }
+    },
+    "reset": {
+        "type": "origins:action_on_callback",
+        "entity_action_chosen": {
+            "type": "origins:change_resource",
+            "resource": "frog:parched_meter",
+            "change": 0,
+            "operation": "set"
+        },
+        "execute_chosen_when_orb": true,
+        "entity_action_lost": {
+            "type": "origins:change_resource",
+            "resource": "frog:parched_meter",
+            "change": 0,
+            "operation": "set"
+        }
+    }
+}

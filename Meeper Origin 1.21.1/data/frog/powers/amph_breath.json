@@ -1,0 +1,10 @@
+{
+    "name": "Two Lungs",
+    "description": "You can breathe both on land and underwater, and your air never runs out.",
+    "type": "origins:action_over_time",
+    "interval": 2,
+    "entity_action": {
+        "type": "origins:gain_air",
+        "value": 20
+    }
+}

@@ -1,0 +1,32 @@
+{
+    "name": "Meeper Spawn",
+    "description": "Drifting in cold black water, you are not yet what you will be. Air is poison to your lungs and the surface is no place for you. Feed, grow, and wait. Three froglights glow in the dark, and each one is a different fate.",
+    "powers": [
+        "frog:air",
+        "frog:tadpole_size",
+        "frog:green",
+        "frog:swim",
+        "frog:dmg",
+        "frog:vision",
+        "origins:water_breathing",
+        "frog:long_breath",
+        "frog:slime",
+        "frog:range",
+        "frog:slow",
+        "frog:carnivore",
+        "frog:fall",
+        "frog:tadpole_health",
+        "frog:dmg_",
+        "frog:blind",
+        "frog:fire",
+        "frog:feet",
+        "frog:belly",
+        "frog:evolve",
+        "frog:fusion",
+        "frog:starter"
+    ],
+    "icon": {
+        "item": "minecraft:frogspawn"
+    },
+    "impact": 3
+}

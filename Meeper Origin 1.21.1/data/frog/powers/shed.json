@@ -1,0 +1,34 @@
+{
+    "name": "Shedding Skin",
+    "description": "Every curse slides off your hide like a shed skin. You are immune to harmful status effects.",
+    "type": "origins:multiple",
+    "immunity": {
+        "type": "origins:effect_immunity",
+        "effects": [
+            "minecraft:poison",
+            "minecraft:wither",
+            "minecraft:mining_fatigue",
+            "minecraft:nausea",
+            "minecraft:blindness",
+            "minecraft:hunger",
+            "minecraft:weakness",
+            "minecraft:levitation",
+            "minecraft:unluck",
+            "minecraft:darkness",
+            "minecraft:instant_damage"
+        ]
+    },
+    "slow": {
+        "type": "origins:action_over_time",
+        "interval": 1,
+        "condition": {
+            "type": "origins:status_effect",
+            "effect": "minecraft:slowness",
+            "max_amplifier": 5
+        },
+        "entity_action": {
+            "type": "origins:clear_effect",
+            "effect": "minecraft:slowness"
+        }
+    }
+}

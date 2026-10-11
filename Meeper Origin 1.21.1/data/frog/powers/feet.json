@@ -1,0 +1,19 @@
+{
+    "name": "Weird feet",
+    "description": "You cant walk backwards (still can jump backwards).",
+    "type": "origins:active_self",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "slowness",
+            "duration": 3,
+            "amplifier": 6,
+            "show_particles": false,
+            "show_icon": false
+        }
+    },
+    "key": {
+        "key": "key.back",
+        "continuous": true
+    }
+}

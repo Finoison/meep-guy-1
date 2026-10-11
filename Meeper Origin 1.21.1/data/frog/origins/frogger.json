@@ -1,0 +1,34 @@
+{
+    "name": "The Meeper",
+    "description": "Three pools of light, drowned into one. Where the Frog gods once watched, something now notices it. It was a Dart Frog, an Airphibian and a Wart Toad, and it forgave none of them. Every gift of the swamp lives in its body, and the gods are not pleased.",
+    "unchoosable": true,
+    "powers": [
+        "frog:frogger_jump",
+        "frog:frogger_dash",
+        "frog:frogger_speed",
+        "frog:frogger_belly",
+        "frog:frogger_range",
+        "frog:toad_health",
+        "frog:frogger_size",
+        "frog:frogger_color",
+        "frog:warty_hide",
+        "frog:shed",
+        "frog:magma",
+        "frog:amph_breath",
+        "frog:amph_mining",
+        "frog:vision",
+        "frog:slime",
+        "frog:fall",
+        "frog:feet",
+        "frog:frogger_climb",
+        "frog:toxic",
+        "frog:moist",
+        "frog:gods",
+        "frog:form_timer",
+        "frog:meeper_end"
+    ],
+    "icon": {
+        "item": "minecraft:nether_star"
+    },
+    "impact": 3
+}

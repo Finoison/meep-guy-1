@@ -1,0 +1,10 @@
+{
+    "name": "Hungerless God",
+    "description": "Your stomachs add up to no hunger drain from exertion at all.",
+    "type": "origins:modify_exhaustion",
+    "modifier": {
+        "operation": "multiply_base",
+        "value": -1.0,
+        "name": "Frogger appetite"
+    }
+}

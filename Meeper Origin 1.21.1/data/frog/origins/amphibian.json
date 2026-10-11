@@ -1,0 +1,31 @@
+{
+    "name": "The Airphibian",
+    "description": "A creature of two worlds, owned by neither. Air in its lungs and water in its veins, with a tongue that reaches farther than any honest tongue should. Both the pond and the shore keep count of every minute you give them. The frog gods are interested.",
+    "unchoosable": true,
+    "powers": [
+        "frog:jump",
+        "frog:small",
+        "frog:amph_color",
+        "frog:amph_speed",
+        "frog:vision",
+        "frog:amph_breath",
+        "frog:amph_mining",
+        "frog:slime",
+        "frog:amph_range",
+        "frog:fall",
+        "frog:amph_health",
+        "frog:fire",
+        "frog:feet",
+        "frog:belly",
+        "frog:climb",
+        "frog:dash",
+        "frog:waterlog",
+        "frog:gods",
+        "frog:fusion",
+        "frog:form_timer"
+    ],
+    "icon": {
+        "item": "minecraft:ochre_froglight"
+    },
+    "impact": 3
+}

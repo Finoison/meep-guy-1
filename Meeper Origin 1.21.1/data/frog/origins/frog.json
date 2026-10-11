@@ -1,0 +1,37 @@
+{
+    "name": "The Dart Frog",
+    "description": "Venom is its birthright and speed is its blessing. Brilliant, brittle and quick to die, the Dart Frog burns through the swamp like a green spark. The frog gods are watching, and this is their champion.",
+    "unchoosable": true,
+    "powers": [
+        "frog:jump",
+        "frog:air",
+        "frog:small",
+        "frog:green",
+        "frog:swim",
+        "frog:dmg",
+        "frog:vision",
+        "frog:breathe",
+        "frog:slime",
+        "frog:range",
+        "frog:quick",
+        "frog:carnivore",
+        "frog:fall",
+        "frog:health",
+        "frog:dmg_",
+        "frog:blind",
+        "frog:climb",
+        "frog:fire",
+        "frog:feet",
+        "frog:belly",
+        "frog:dash",
+        "frog:gods",
+        "frog:toxic",
+        "frog:moist",
+        "frog:fusion",
+        "frog:form_timer"
+    ],
+    "icon": {
+        "item": "minecraft:verdant_froglight"
+    },
+    "impact": 3
+}

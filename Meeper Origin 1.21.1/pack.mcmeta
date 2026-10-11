@@ -1,0 +1,9 @@
+{
+    "pack": {
+        "name": "Frog",
+        "id": "frog",
+        "pack_format": 48,
+        "version": "1.0.0",
+        "description": ""
+    }
+}
